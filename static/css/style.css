@@ -25,6 +25,8 @@ body {
 }
 
 
-
-
-
+.logo {
+	left: 20px;
+    width: 199px;
+	margin-bottom:-15px;
+	}
