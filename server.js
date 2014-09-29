@@ -58,6 +58,19 @@ router.get('/sessions', function (req, res) {
 	});
 });
 
+//get views data
+router.get('/views', function (req, res) {
+	stream = fs.createReadStream('data/views.json', {encoding: 'utf8'});
+	stream.on('data', function(chunk) {
+		return res.end(chunk);
+	});
+	
+	//error check streams
+	stream.on('error', function(err) {
+	  process.stderr.write("ERROR: " + err.message + "\n");
+	});
+});
+
 //helpers
 /*
 function serve_chunks(file, res) {
