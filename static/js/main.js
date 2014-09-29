@@ -132,8 +132,7 @@ function drawDevice() {
           pieHole: 0.4,
 		  backgroundColor: {fillOpacity: '0'},
 		  legend: {position: 'top',textStyle: {color: '#666', fontSize: 13}},
-		  colors: ['#a0cc3d', '#6a7e7d', 'b0a433', 'f05023', '0b2024', '34677c'],
-		  is3D: true
+		  colors: ['#a0cc3d', '#6a7e7d', 'b0a433', 'f05023', '0b2024', '34677c']
         };
 
 }
