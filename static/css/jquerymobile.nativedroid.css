@@ -67,12 +67,13 @@ width: 91px;
 .ui-listview>li h1, .ui-listview>li h2, .ui-listview>li h3, .ui-listview>li h4, .ui-listview>li h5, .ui-listview>li h6,
 .ui-btn, label.ui-btn,
 .ui-page-theme-b a, html .ui-bar-b a, html .ui-page-theme-b a, html body .ui-group-theme-b a {
-	font-family: "Roboto", sans-serif;
+	font-family: "Colaborate-Regular", sans-serif;
 	font-weight: 300;
 }
 
 .ui-content {
 	padding: 0px;
+	background: #f0f0f0;
 }
 
 .ui-content .ui-listview-inset, .ui-panel-inner .ui-listview-inset,.ui-content .ui-listview, .ui-panel-inner .ui-listview {
@@ -344,6 +345,8 @@ img.ui-li-icon {
 .ui-content h1,.ui-content h2,.ui-content h3,.ui-content h4,.ui-content h5,.ui-content h6,.ui-content p {
 	font-weight: 100;
 	margin: 7px 0px 7px 0px;
+	text-transform:uppercase;
+	color:#08313f;
 }
 
 .ui-collapsible h1.ui-collapsible-heading, .ui-collapsible h2.ui-collapsible-heading, .ui-collapsible h3.ui-collapsible-heading, .ui-collapsible h4.ui-collapsible-heading, .ui-collapsible h5.ui-collapsible-heading, .ui-collapsible h6.ui-collapsible-heading {
@@ -905,9 +908,11 @@ progress  {
 .nativeDroidCards {
 	list-style: none;
 	padding: 12px 0px 0px 0px;
+	font-size:1.4em;
 	margin: 0px 0px 0px 0px;
 	perspective: 500;
 	-webkit-perspective: 500;
+	color: #6a7e7d;
 }
 
 .nativeDroidCards > li {

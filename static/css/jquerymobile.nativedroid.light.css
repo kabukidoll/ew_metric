@@ -18,7 +18,7 @@
 .ui-page-theme-b .ui-header .ui-btn:hover,
 .ui-overlay-b, .ui-page-theme-b, .ui-page-theme-b .ui-panel-wrapper,
 .ui-page-theme-b, .ui-page-theme-b .ui-body-inherit, html .ui-bar-b .ui-body-inherit, html .ui-page-theme-b .ui-body-inherit, html body .ui-group-theme-b .ui-body-inherit, html .ui-panel-page-container-b {
-	color: #696969;
+	color: #08313f;
 }
 
 
@@ -50,7 +50,6 @@
 }
 
 .ui-popup-container, .ui-popup {
-	background-color: #ffffff;
 	background-color: rgba(255,255,255,1);
 }
 
@@ -332,13 +331,13 @@ code,pre {
 }
 
 .nativeDroidCards {
-	background-color: rgba(125,125,125,0.05);
+	
 }
 
 .nativeDroidCards > li {
-	border: 1px solid rgba(0,0,0,0.1);
-	box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
-	background-color: #FFFFFF;
+	border: 0px solid rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.05);
+	background-color: #fafafa;
 }
 
 

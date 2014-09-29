@@ -30,11 +30,11 @@ function drawChart() {
 			  //chart options
 			  var options = {
 				title: '',
-				hAxis: {title: 'Date', titleTextStyle: {color: 'black'}},
-				vAxis: {title: 'Downloads', titleTextStyle: {color: 'black'}},
+				hAxis: {title: 'Date', titleTextStyle: {color: '#666'}},
+				vAxis: {title: 'Downloads', titleTextStyle: {color: '#666'}},
 				backgroundColor: {fillOpacity: '0'},
-				legend: {position: 'top', textStyle: {color: 'black', fontSize: 16}},
-				colors: ['#fcb441', 'blue']
+				legend: {position: 'top', textStyle: {color: '#666', fontSize: 13}},
+				colors: ['#6a7e7d', '#a0cc3d', '#3c4b4b']
 			  };
 		  
 }
@@ -64,11 +64,11 @@ function drawSession() {
 			  //chart options
 			  var options = {
 				title: '',
-				hAxis: {title: 'Date', titleTextStyle: {color: 'black'}},
-				vAxis: {title: 'Sessions', titleTextStyle: {color: 'black'}},
+				hAxis: {title: 'Date', titleTextStyle: {color: '#666'}},
+				vAxis: {title: 'Sessions', titleTextStyle: {color: '#666'}},
 				backgroundColor: {fillOpacity: '0'},
-				legend: {position: 'top', textStyle: {color: 'black', fontSize: 16}},
-				colors: ['#fcb441', 'blue']
+				legend: {position: 'top', textStyle: {color: '#666', fontSize: 13}},
+				colors: ['#6a7e7d', '#a0cc3d']
 			  };
 		  
 }
@@ -98,11 +98,11 @@ function drawTotals() {
 			  //chart options
 			  var options = {
 				title: '',
-				hAxis: {title: 'Date', titleTextStyle: {color: 'black'}},
-				vAxis: {title: 'Downloads', titleTextStyle: {color: 'black'}},
+				hAxis: {title: 'Date', titleTextStyle: {color: '#666'}},
+				vAxis: {title: 'Downloads', titleTextStyle: {color: '#666'}},
 				backgroundColor: {fillOpacity: '0'},
-				legend: {position: 'top', textStyle: {color: 'black', fontSize: 16}},
-				colors: ['#fcb441', 'blue']
+				legend: {position: 'top', textStyle: {color: '#666', fontSize: 13}},
+				colors: ['#a0cc3d', '#6a7e7d']
 			  };
 		  
 }
