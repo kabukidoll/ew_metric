@@ -117,7 +117,6 @@ function drawDevice() {
 							}
 							else {
 							row = [d.Article, parseInt(d.Views)];
-								console.log(row);
 							rows.push(row);
 							}
 						});
@@ -133,7 +132,17 @@ function drawDevice() {
           pieHole: 0.4,
 		  backgroundColor: {fillOpacity: '0'},
 		  legend: {position: 'top',textStyle: {color: '#666', fontSize: 13}},
-		  colors: ['#a0cc3d', '#6a7e7d', 'b0a433', 'f05023', '0b2024', '34677c']
+		  colors: ['#a0cc3d', '#6a7e7d', 'b0a433', 'f05023', '0b2024', '34677c'],
+		  is3D: true
         };
 
+}
+
+function sayHi () {
+	$.get( "http://127.0.0.1:8080/content/EW", function( data ) {
+	});
+}
+function saySessions () {
+	$.get( "http://127.0.0.1:8080/content/sessions", function( data ) {
+	});
 }

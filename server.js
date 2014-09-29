@@ -31,9 +31,14 @@ router.use(function(req, res, next) {
 	next(); //next route
 });
 
+//download files
+app.get('/content/:filename', function (req, res) {
+    serve_static_file(req.params.filename, res);
+});
+
 // setup the routes -- first is call to raw downloads
 router.get('/hello', function (req, res) {
-	stream = fs.createReadStream('outpuData.json', {encoding: 'utf8'});
+	stream = fs.createReadStream('data/outpuData.json', {encoding: 'utf8'});
 	stream.on('data', function(chunk) {
 		//serve_chunks(chunk, res);
 		return res.end(chunk);
@@ -72,6 +77,17 @@ router.get('/views', function (req, res) {
 });
 
 //helpers
+function serve_static_file(file, res) {
+	if (file == 'EW') {
+		var csvfile = 'data/EW.csv';
+		res.download(csvfile);
+	} else if (file == 'sessions') {
+		var csvfile = 'data/sessions.csv';
+		res.download(csvfile);
+	}
+   
+}
+
 /*
 function serve_chunks(file, res) {
 	var x = JSON.parse(file);
