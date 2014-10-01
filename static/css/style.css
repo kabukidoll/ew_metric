@@ -24,9 +24,20 @@ body {
  width: 100%;
 }
 
-
 .logo {
 	left: 20px;
     width: 199px;
 	margin-bottom:-15px;
+	}
+
+.ui-table-columntoggle-btn {
+    margin-bottom: 0.8em;
+    top: -12px;
+	color:#666;
+}
+
+.delta {
+	float:right;
+	height: 50px;
+	margin-right:20px;
 	}

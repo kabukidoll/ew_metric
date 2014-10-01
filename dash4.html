@@ -44,6 +44,7 @@
   <body>
 	<div data-role="page" data-theme='b'>
 		<!-- panel menu -->
+		<!--
 		<div data-role="panel" data-display="push" id="mypanel" data-theme="b">
         <img class='logo' src="css/images/ew.png">
 		<ul data-role="listview">
@@ -52,13 +53,17 @@
             <li data-icon='false'><a href="#"><i class='lIcon fa fa-beer'></i>Log Off</a></li>
         </ul>
     	</div>
+		-->
+
 		<!-- page header -->
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-			<a href="#mypanel" data-role='button' data-inline='true'><i class='lIcon fa fa-bars'></i></a>
+			<a href="http://127.0.0.1:8080/logout" data-role='button' rel="external", data-ajax="false" data-inline='true'><i class='lIcon fa fa-sign-out'></i></a>
+
+			 <img class='delta' src="css/images/delta.png">
    
         </div>
 		<!-- page one content -->
-		<div data-role="content">
+		<div data-role="content" class="scrollable">
 			<div class='inset'>
 	            <h1>Metrics Board</h1>
 				<ul data-nativedroid-plugin='cards'>
@@ -66,7 +71,7 @@
 					<li data-cards-type='weather'>
 						<div>
 							Raw Downloads
-							<a href="http://127.0.0.1:8080/content/EW" id="raw_downloads" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a> 
+							<a href="http://127.0.0.1:8080/content/EW" id="raw_downloads" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a> 
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_downloads" class='visualization'></div>
@@ -76,7 +81,7 @@
 					<li data-cards-type='publictransport'>
 						<div>
 							Total Downloads
-							<a href="http://127.0.0.1:8080/content/EW" id="raw_downloads" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a>
+							<a href="http://127.0.0.1:8080/content/EW" id="raw_downloads" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a>
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_div2" class='visualization'></div>
@@ -86,7 +91,7 @@
 					<li data-cards-type='sports'>
 						<div>
 							Sessions
-							<a href="http://127.0.0.1:8080/content/sessions" id="sessions" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a>
+							<a href="http://127.0.0.1:8080/content/sessions" id="sessions" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a>
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_div3" class='visualization'></div>
@@ -97,7 +102,7 @@
 					<li data-cards-type='text'>
 						<div>
 							Articles
-							<a href="#table-column-toggle-popup" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a>
+							<a href="http://127.0.0.1:8080/content/articles" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a>
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_div4" class='visualization'></div>
@@ -110,6 +115,8 @@
 		</div>
 	
 	</div>
+	  
+	  
 	  <script src="js/nativedroid.script.js"></script>
 	  
 	  <script> //event handling

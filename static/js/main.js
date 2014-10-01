@@ -132,7 +132,7 @@ function drawDevice() {
           pieHole: 0.4,
 		  backgroundColor: {fillOpacity: '0'},
 		  legend: {position: 'top',textStyle: {color: '#666', fontSize: 13}},
-		  colors: ['#a0cc3d', '#6a7e7d', 'b0a433', 'f05023', '0b2024', '34677c']
+		  colors: ['#717b7e', '#6a7e7d', '#a0cc3d', '#b0a433', '#6c493f', '#0b2024','#34677c','#0b2024','#d7cccb','#3c4b4b','#599999','#297a89','#2f96c0','#3e6471','#8d885b','#69754e',]
         };
 
 }
