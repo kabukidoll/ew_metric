@@ -33,10 +33,6 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 // =============================================================================
 
-//TODO REMOVE THESE TWO LINES IF THIS WORKS OUT
-//app.use(bodyParser.urlencoded({ extended: true}));
-//app.use(bodyParser.json());
-
 app.all('*', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
@@ -117,8 +113,10 @@ function serve_static_file(file, res) {
 	} else if (file == 'sessions') {
 		var csvfile = 'data/sessions.csv';
 		res.download(csvfile);
+	} else if (file == 'views') {
+		var csvfile = 'data/views.csv';
+		res.download(csvfile);
 	}
-   
 }
 
 /*
@@ -141,4 +139,6 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 
 //start the server
 app.listen(port);
+console.log('listening on 8080');
+sten(port);
 console.log('listening on 8080');
