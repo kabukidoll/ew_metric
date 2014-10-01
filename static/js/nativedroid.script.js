@@ -132,7 +132,7 @@ $(document).on("pageinit", function() {
 				},
 				create : {
 					text : function(obj) {
-						console.log("text");
+						//console.log("text");
 					},
 					traffic : function(obj) {
 						route = obj.data("cards-traffic-route");
@@ -141,13 +141,13 @@ $(document).on("pageinit", function() {
 						nativeDroid.api.helper.googlemaps.directions.getRoute(route);
 					},
 					weather : function(obj) {
-						console.log("weather");
+						//console.log("weather");
 					},
 					publictransport : function(obj) {
-						console.log("publictransport");
+						//console.log("publictransport");
 					},
 					sports : function(obj) {
-						console.log("sports");
+						//console.log("sports");
 					}
 				}
 			},

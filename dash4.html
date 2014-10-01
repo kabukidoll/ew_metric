@@ -25,7 +25,7 @@
 		<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
 	    <script src="js/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-	  
+	    
 	  	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	  	<script src="js/main.js"></script>
 	  
@@ -36,15 +36,15 @@
 		
 			$(window).on("throttledresize", function (event) {
 				drawChart();
-				drawSession();  //TODO MOVE THIS
 			});
-			
+				
     </script>
 	  
   </head>
   <body>
 	<div data-role="page" data-theme='b'>
 		<!-- panel menu -->
+		<!--
 		<div data-role="panel" data-display="push" id="mypanel" data-theme="b">
         <img class='logo' src="css/images/ew.png">
 		<ul data-role="listview">
@@ -53,13 +53,17 @@
             <li data-icon='false'><a href="#"><i class='lIcon fa fa-beer'></i>Log Off</a></li>
         </ul>
     	</div>
+		-->
+
 		<!-- page header -->
 		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-			<a href="#mypanel" data-role='button' data-inline='true'><i class='lIcon fa fa-bars'></i></a>
+			<a href="http://127.0.0.1:8080/logout" data-role='button' rel="external" data-ajax="false" data-inline='true'><i class='lIcon fa fa-sign-out'></i></a>
+
+			 <img class='delta' src="css/images/delta.png">
    
         </div>
 		<!-- page one content -->
-		<div data-role="content">
+		<div data-role="content" class="scrollable">
 			<div class='inset'>
 	            <h1>Metrics Board</h1>
 				<ul data-nativedroid-plugin='cards'>
@@ -67,7 +71,7 @@
 					<li data-cards-type='weather'>
 						<div>
 							Raw Downloads
-							<a href="#table-column-toggle-popup" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a>
+							<a href="http://127.0.0.1:8080/content/EW" id="raw_downloads" rel="external" data-ajax="false" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a> 
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_downloads" class='visualization'></div>
@@ -77,7 +81,7 @@
 					<li data-cards-type='publictransport'>
 						<div>
 							Total Downloads
-							<a href="#table-column-toggle-popup" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a>
+							<a href="http://127.0.0.1:8080/content/EW" id="raw_downloads" rel="external" data-ajax="false" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a>
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_div2" class='visualization'></div>
@@ -87,7 +91,7 @@
 					<li data-cards-type='sports'>
 						<div>
 							Sessions
-							<a href="#table-column-toggle-popup" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a>
+							<a href="http://127.0.0.1:8080/content/sessions" id="sessions" rel="external" data-ajax="false" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a>
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_div3" class='visualization'></div>
@@ -95,10 +99,10 @@
 						<!-- <button data-inline='true' class='downbutton'>CSV</button> -->
 					</li>
 					<!-- Fourth Card -->
-					<li data-cards-type='sports'>
+					<li data-cards-type='text'>
 						<div>
-							Platforms
-							<a href="#table-column-toggle-popup" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV</a>
+							Articles
+							<a href="http://127.0.0.1:8080/content/views" id="views" rel="external" data-ajax="false" class="ui-table-columntoggle-btn ui-btn ui-btn ui-shadow ui-mini">CSV&nbsp<i class='lIcon fa fa-cloud-download'></i></a>
 						</div>
 						<div class="visualization_wrap">
 							<div id="chart_div4" class='visualization'></div>
@@ -111,7 +115,21 @@
 		</div>
 	
 	</div>
+	  
+	  
 	  <script src="js/nativedroid.script.js"></script>
+	  
+	  <script> //event handling
+		  $(function() {
+				$( "#raw_downloads" ).click(function() {
+					sayHi();
+				});
+			  	$( "#sessions" ).click(function() {
+					saySessions();
+				});
+			  
+		});
+	  </script>
 	  
   </body>
 </html>
